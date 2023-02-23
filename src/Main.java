@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     // Edit these!
@@ -6,15 +7,26 @@ public class Main {
     public static final int WOLF_BREED_TIME = 20;
     public static final int RABBIT_BREED_TIME = 5;
     public static final int MAX_RABBITS = 50_000;
-    public static final int START_WOLVES = 75;
-    public static final int START_RABBITS = 100;
 
-    // Do NOT modify these
+    // Do NOT modify the following
     public static Random rand = new Random();
+    public static Scanner scan = new Scanner(System.in);
 
-    static int rabbits = START_RABBITS;
-    static int wolves = START_WOLVES;
+    static int rabbits = 0;
+    static int wolves = 0;
     public static void main(String[] args) {
+        System.out.println("How many rabbits are there?: ");
+        rabbits = scan.nextInt();
+        scan.nextLine();
+
+        System.out.println("How many wolves are there?: ");
+        wolves = scan.nextInt();
+        scan.nextLine();
+
+        startGame();
+    }
+
+    public static void startGame() {
         int day = 1;
 
         while (wolves > 0 && rabbits > 0) {
