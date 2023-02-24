@@ -14,6 +14,7 @@ public class Main {
     public static Random rand = new Random();
     public static Scanner scan = new Scanner(System.in);
 
+    // Starting amount of animals
     static int rabbits = 0;
     static int wolves = 0;
     public static void main(String[] args) {
