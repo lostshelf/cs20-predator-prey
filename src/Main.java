@@ -47,6 +47,7 @@ public class Main {
                 rabbits /= 2;
             }
 
+            System.out.printf("Wolves: %d | Rabbits: %d%n", wolves, rabbits);
             day++;
         }
 
