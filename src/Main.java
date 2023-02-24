@@ -5,7 +5,9 @@ public class Main {
     // Edit these!
     public static final int CATCH_CHANCE = 50;
     public static final int WOLF_BREED_TIME = 20;
+    public static final int WOLF_BREED_AMOUNT = 1;
     public static final int RABBIT_BREED_TIME = 5;
+    public static final int RABBIT_BREED_AMOUNT = 3;
     public static final int MAX_RABBITS = 50_000;
 
     // Do NOT modify the following
@@ -62,10 +64,10 @@ public class Main {
     }
 
     public static void rabbitsBreed() {
-        rabbits += Math.floor((float) rabbits / 2) * 3;
+        rabbits += Math.floor((float) rabbits / 2) * RABBIT_BREED_AMOUNT;
     }
 
     public static void wolvesBreed() {
-        wolves += Math.floor((float) wolves / 2);
+        wolves += Math.floor((float) wolves / 2) * WOLF_BREED_AMOUNT;
     }
 }
